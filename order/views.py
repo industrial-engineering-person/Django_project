@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from requests import request
 from order.models import Shop, Menu, Order, Orderfood
+from user.models import User
 from order.serializers import ShopSerializer, MenuSerializer
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
@@ -15,10 +16,16 @@ def shop(request):
         # shop = Shop.objects.all() # insomnia test용
         # serializer = ShopSerializer(shop, many=True) # DB 데이터는 Json이 아니기에 Json으로 바꾸는 Serialize
         # return JsonResponse(serializer.data, safe=False)
-        shop = Shop.objects.all()
-        return render(request, 'order/shop_list.html', {'shop_list':shop})
+        try:
+            if User.objects.get(id=request.session['user_id']).user_type == 0:
+                shop = Shop.objects.all()
+                return render(request, 'order/shop_list.html', {'shop_list':shop})
+            else:
+                return render(request, 'order/fail.html')
+        except:
+            return render(request, 'order/fail.html')
         
-    elif request.method == 'POST': # 수정
+    elif request.method == 'POST': # 수정 by insomnia
         data = JSONParser().parse(request)
         serializer = ShopSerializer(data=data)
         if serializer.is_valid():
@@ -37,6 +44,7 @@ def menu(request, shop):
     elif request.method == 'POST': # 수정
         data = JSONParser().parse(request)
         serializer = MenuSerializer(data=data)
+        print(serializer)
         if serializer.is_valid():
             serializer.save() # 형식이 맞아서 정상적으로 DB update
             return JsonResponse(serializer.data, status=201)

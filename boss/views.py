@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from requests import request
 from order.models import Shop, Menu, Order, Orderfood
+from user.models import User
 from order.serializers import ShopSerializer, MenuSerializer
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
@@ -10,10 +11,19 @@ from rest_framework.parsers import JSONParser
 @csrf_exempt
 def order_list(request, shop):
     if request.method == 'GET':
-        order_list = Order.objects.filter(shop=shop)
-        return render(request, 'boss/order_list.html', {'order_list':order_list})
+        # order_list = Order.objects.filter(shop=shop)
+        # return render(request, 'boss/order_list.html', {'order_list':order_list})
+        try:
+            if User.objects.get(id=request.session['user_id']).user_type == 1:
+                order_list = Order.objects.filter(shop=shop)
+                return render(request, 'boss/order_list.html', {'order_list':order_list})
+            else:
+                return render(request, 'boss/fail.html')
+        except:
+            return render(request, 'boss/fail.html')
     else:
         return HttpResponse(status=404)
+    
         
 @csrf_exempt
 def time_input(request):

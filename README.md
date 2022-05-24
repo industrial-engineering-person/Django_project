@@ -33,12 +33,12 @@
  ### 결과 화면
 |기능|UI|
 |------|---|
-|로그인기능(간략하게 구현)|<img src=images/login.png  width="60%" border="2"/>|
-|고객(음식점 선택)|<img src=images/order_shops.png  width="70%" border="2"/>|
+|로그인기능(간략하게 구현)|<img src=images/login.png  width="55%" border="2"/>|
+|고객(음식점 선택)|<img src=images/order_shops.png  width="75%" border="2"/>|
 |고객(음식 주문)|<img src=images/order_menus.png  width="30%" border="2"/>|
-|고객(주문 내역)|<img src=images/order_order.png  width="85%" border="2"/>|
-|사장님(배달 예상 소요시간 입력)|<img src=images/boss_orders.png  width="85%" border="2"/>|
-|배달기사님(배송완료후 배송완료 버튼 클릭)|<img src=images/delivery_orders.png  width="85%" border="2"/>|
+|고객(주문 내역)|<img src=images/order_order.png  width="90%" border="2"/>|
+|사장님(배달 예상 소요시간 입력)|<img src=images/boss_orders.png  width="90%" border="2"/>|
+|배달기사님(배송완료후 배송완료 버튼 클릭)|<img src=images/delivery_orders.png  width="90%" border="2"/>|
 
 
 

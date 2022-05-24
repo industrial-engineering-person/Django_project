@@ -33,8 +33,8 @@
  ### 결과 화면
 |기능|UI|
 |------|---|
-|로그인기능(간략하게 구현)|<img src=images/login.png  width="55%" border="2"/>|
-|고객(음식점 선택)|<img src=images/order_shops.png  width="75%" border="2"/>|
+|로그인기능(간략하게 구현)|<img src=images/login.png  width="50%" border="2"/>|
+|고객(음식점 선택)|<img src=images/order_shops.png  width="85%" border="2"/>|
 |고객(음식 주문)|<img src=images/order_menus.png  width="30%" border="2"/>|
 |고객(주문 내역)|<img src=images/order_order.png  width="90%" border="2"/>|
 |사장님(배달 예상 소요시간 입력)|<img src=images/boss_orders.png  width="90%" border="2"/>|
@@ -69,18 +69,6 @@
  <br> 
  
  
-## Repository 구조의 예를 들면 다음과 같습니다.
-
-```
-.
-├── airflow_py              # MWAA 활용 전 local 환경에서 airflow를 정리한 파일
-├── notebook                # aws emr에서 batch processing code
-├── script                  # MWAA에서 필요로하는 dag파일과 emr steps용 파일
-└── README.md    # MWAA에서 필요로하는 dag파일과 emr steps용 파일
- 
-```
-
-
 
 ***
 

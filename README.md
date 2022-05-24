@@ -31,9 +31,15 @@
   
  
  ### result 화면
+ 
+> 로그인기능 간략하게
 
-* User_order(Django) MYSQL에서 가게(Shop) 또는 주문(Order)가 생성되거나 수정되나 삭제될 시 Boss(Flask)에 RabbitMQ가 producing함
-* Boss(Flask)에서 consuming을 받고 routing_key(order_created, order_updated, order_deleted 등)에 따라 MYSQL이 consistance를 유지함
+> 고객(음식점선택, 음식주문, 주문내역)
+
+> 사장님(배달 예상 소요시간 입력)
+
+> 배달기사님(배송완료후 배송완료 버튼 클릭)
+
 
   
   <br>

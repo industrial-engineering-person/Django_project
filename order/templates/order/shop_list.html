@@ -1,5 +1,45 @@
-{% for shop in shop_list %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+<div class="container my-3">
+    <table class="table">
+        <thead>
+        <tr class="table-dark">
+            <th>가게</th>
+            <th>주소</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if shop_list %}
+        {% for shop in shop_list %}
+        <tr>
+            {% comment %} <h6><a href = '/order/menus/{{shop.id}}'>{{shop.shop_name}}</a></h6> {% endcomment %}
+            <td>
+            <h6><a href = '{% url 'menu' shop.id %}'>{{shop.shop_name}}</a></h6>
+            </td>
+            <td>
+            <h6>{{shop.shop_address}}</h6>
+            </td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="3">등록된 가게가 없습니다.</td>
+        </tr>
+        {% endif %}
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- {% for shop in shop_list %}
     {% comment %} <h5><a href = '/order/menus/{{shop.id}}'>{{shop.shop_name}}</a></h5> {% endcomment %}
     <h5><a href = '{% url 'menu' shop.id %}'>{{shop.shop_name}}</a></h5>
     <h5>{{shop.shop_address}}</h5>
-{% endfor %}
+{% endfor %} -->

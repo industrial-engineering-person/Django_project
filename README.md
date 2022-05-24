@@ -46,6 +46,23 @@
   <br>
 
   <br>
+## Repository 구조
+```
+.
+├── boss                    # 사장님 
+├── delivery                # 배달 기사 앱 파일
+├── django_project          # config 파일
+├── images                  # README.md 용 이미지
+├── order                   # 고객 주문 파일
+├── static                  # 부트스트랩 템플릿 파일
+├── user                    # 로그인 파일
+├── README.md
+├── db.sqlite3              # 간이 배포용 sqlite3 / 타 DB로 확장가능
+├── manage.py
+└── requirements.txt        # 프레임워크, 라이브러리 버전
+ 
+```
+
 
 ***
 

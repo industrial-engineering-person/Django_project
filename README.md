@@ -46,11 +46,12 @@
   <br>
 
   <br>
+  
 ## Repository 구조
 
 ```
 .
-├── boss                    # 사장님 
+├── boss                    # 사장님 앱 파일
 ├── delivery                # 배달 기사 앱 파일
 ├── django_project          # config 파일
 ├── images                  # README.md 용 이미지
@@ -80,6 +81,6 @@
 ```
 
 
-<br>
+
 ***
 

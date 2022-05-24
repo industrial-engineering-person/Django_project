@@ -63,6 +63,15 @@
  
 ```
 
+```
+.
+├── airflow_py              # MWAA 활용 전 local 환경에서 airflow를 정리한 파일
+├── notebook                # aws emr에서 batch processing code
+├── script                  # MWAA에서 필요로하는 dag파일과 emr steps용 파일
+└── README.md
+ 
+```
+
 
 ***
 

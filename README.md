@@ -33,7 +33,7 @@
  ### result 화면
  
 > 로그인기능(간략하게 구현)
-<img src=images/login.png  width="60%" border="2"/>
+<img src=images/login.png border="2" width="30%"/>
 > 고객(음식점선택, 음식주문, 주문내역)
 <img src=images/order_shops.png  width="45%" border="2"/>
 <img src=images/order_menus.png  width="30%" border="2"/>

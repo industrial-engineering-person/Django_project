@@ -33,7 +33,7 @@
  ### result 화면
 |기능|UI|
 |------|---|
-|로그인기능(간략하게 구현)|<img src=images/login.png  width="45%" border="2"/>|
+|로그인기능(간략하게 구현)|<img src=images/login.png  width="80%" border="2"/>|
 |테스트1|테스트2|
 |테스트1|테스트2|
 

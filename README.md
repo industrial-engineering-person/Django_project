@@ -7,7 +7,7 @@
 > 2022.05.진행
 ### Bounded Context
 
-<img src=images/Bounded_Context.png  width="60%"/>
+<img src=images/Bounded_context.png  width="60%"/>
 
 
   

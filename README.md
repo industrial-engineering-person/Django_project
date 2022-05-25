@@ -5,7 +5,7 @@
 
 ## Description
 
-> 2022.05.진행
+> 2022.05.진행.
 ### Bounded Context
 
 <img src=images/Bounded_context.png  width="60%"/>
